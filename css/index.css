@@ -1,0 +1,228 @@
+/* Resetting margins and padding for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body style */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #eeeeee;
+  padding: 20px;
+  font-family: math;
+}
+
+/* Container for form and search area */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Form container */
+.form-container {
+  flex-grow: 1; /* Allow the form container to take up the remaining space */
+  flex-shrink: 0; /* Prevent it from shrinking */
+  flex-basis: 0; /* No initial size */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Style for individual form fields */
+form p {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+form p label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input field styling */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Submit button container */
+.submit-container {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+  margin-top: 20px;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Search area */
+.search-container {
+  flex-grow: 0; /* Don't allow the search container to grow */
+  flex-shrink: 0; /* Prevent it from shrinking */
+  flex-basis: 20%; /* Set the initial size to 40% */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-container button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.clear-search-btn {
+  background-color: #ff0000 !important;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.clear-search-btn:hover {
+  background-color: darkred !important;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack form and search on smaller screens */
+    align-items: center;
+  }
+
+  .search-container {
+    flex: 1; /* Make search container take full width */
+    margin-top: 20px;
+    padding: 15px; /* Reduce padding for smaller screens */
+    width: 100%; /* Make search container full width */
+
+  }
+
+  .search-container input[type="text"] {
+    font-size: 0.9rem; /* Reduce input font size for better fit */
+  }
+
+  .search-container button {
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    padding: 10px; /* Further reduce padding */
+    width: 100%; /* Make search container full width */
+  }
+
+  .search-container input[type="text"],
+  .search-container button {
+    font-size: 0.8rem; /* Make input and button text smaller */
+  }
+
+  .clear-search-btn {
+    font-size: 14px; /* Adjust clear button size */
+  }
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+table a {
+  color: #007BFF;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* No records found */
+p {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}

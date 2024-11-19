@@ -1,0 +1,90 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body styling */
+body {
+  font-family: math;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: block;
+  margin: 0; /* Remove default margin */
+}
+
+/* Center the content */
+h1 {
+  text-align: center; /* Center the title */
+  margin-top: 50px; /* Add space at the top */
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto; /* Center the form with auto margins */
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input fields styling */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Back to Home link styling */
+p a {
+  display: block;
+  margin-top: 14px;
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
