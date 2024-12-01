@@ -1,5 +1,12 @@
 <?php require_once 'core/dbConfig.php'; ?>
 <?php require_once 'core/models.php'; ?>
+<?php
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//   header('Location: login.php');
+//   exit();
+// }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +19,9 @@
 </head>
 
 <body>
+  <h4 style="text-align: right;">
+    <a href="logout.php" style="color: red; text-decoration: none;">Logout</a>
+  </h4>
   <div class="container">
     <!-- Form on the left side -->
     <div class="form-container">
@@ -58,6 +68,7 @@
           <button type="submit" name="clearSearch" class="clear-search-btn">Clear Queue</button>
         </form>
       <?php endif; ?>
+
     </div>
   </div>
 
@@ -78,6 +89,7 @@
               <th>Occupation</th>
               <th>Years of Experience</th>
               <th>Field of Care</th>
+              <th>Date Added</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -90,6 +102,7 @@
                 <td><?php echo $employee['occupation']; ?></td>
                 <td><?php echo $employee['years_of_experience']; ?></td>
                 <td><?php echo $employee['expertise']; ?></td>
+                <td><?php echo $employee['date_added']; ?></td>
                 <td>
                   <a href="update.php?employee_id=<?php echo $employee['employee_id']; ?>">Edit</a>
                   <a href="delete.php?employee_id=<?php echo $employee['employee_id']; ?>">Delete</a>

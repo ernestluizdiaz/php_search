@@ -7,6 +7,18 @@ CREATE TABLE Employee (
     expertise VARCHAR(100) NOT NULL      
 );
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE Employee
+ADD COLUMN date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL;
+
+
 
 insert into employee (employee_id, last_name, first_name, occupation, years_of_experience, expertise) values (1, 'Ogelbe', 'Nevile', 'Doctor', 24, 'Rheumatology');
 insert into employee (employee_id, last_name, first_name, occupation, years_of_experience, expertise) values (2, 'Dow', 'Bunnie', 'Occupational Therapist', 32, 'Physical Therapy');
